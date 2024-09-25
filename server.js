@@ -22,6 +22,7 @@ const metaRoute = require("./routes/Meta.js");
 const categoryRoute = require("./routes/Categories");
 const orderRoute = require("./routes/Orders.js");
 const gameRoute = require("./routes/Games.js");
+const recipeRoute = require("./routes/Recipes.js");
 const { connectDB } = require("./connectToDB.js");
 const socketHandler = require("./socketHandler.js");
 const { OrderWatcher } = require("./watchers/OrderWatcher.js");
@@ -32,6 +33,7 @@ app.use("/meta", metaRoute);
 app.use("/categories", categoryRoute);
 app.use("/orders", orderRoute);
 app.use("/games", gameRoute);
+app.use("/recipes", recipeRoute);
 
 http.listen(PORT, async () => {
   try {

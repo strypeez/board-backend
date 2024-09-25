@@ -95,7 +95,6 @@ router.post("/list", async function (req, res) {
 });
 
 router.post("/create", async function (req, res) {
-  const params = req.body.params;
   try {
     await connectDB();
     const newGame = new GameModel({
